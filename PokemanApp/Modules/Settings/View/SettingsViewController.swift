@@ -59,7 +59,8 @@ class SettingsViewController: UIViewController,ISettingsView {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
-        mySwitch.isOn = overrideUserInterfaceStyle.rawValue != 0 || overrideUserInterfaceStyle.rawValue != 1
+        print(overrideUserInterfaceStyle.rawValue)
+        mySwitch.isOn = overrideUserInterfaceStyle.rawValue != 0
         SettingsViewModel.shared.switchState
             .sink(receiveValue: { [weak self] isOn in
                 self?.mySwitch.isOn = isOn
@@ -82,4 +83,8 @@ class SettingsViewController: UIViewController,ISettingsView {
             dividerView.widthAnchor.constraint(equalTo: stackView.widthAnchor),
         ])
     }
+}
+#Preview{
+    let vc = SettingsViewController()
+    return vc
 }

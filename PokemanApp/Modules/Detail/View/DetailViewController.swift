@@ -97,6 +97,11 @@ class DetailViewController: UIViewController {
     
 }
 
+#Preview{
+    let vc = DetailViewController(pokemonDetailResult: PokemonDetailResult(abilities: [], base_experience: 0, forms: [], game_indices: [], height: 0, id: 0, is_default: false, location_area_encounters: "Location", moves: [], name: "Name", sprites: Sprites(front_default: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png", other: Other(home: Home(front_default: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png"))), stats: [], types: [], weight: 0))
+    return vc
+}
+
 extension DetailViewController: IDetailView {
     func configureNavigationBar() {
         let backButton = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(close))

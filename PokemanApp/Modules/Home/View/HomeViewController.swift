@@ -68,8 +68,12 @@ final class HomeViewController: UIViewController, UISearchControllerDelegate {
         super.viewWillAppear(animated)
         viewModel.viewWillAppear()
     }
+    
 }
-
+#Preview{
+    let vc = HomeViewController()
+    return vc
+}
 //MARK: - TableView DataSource
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

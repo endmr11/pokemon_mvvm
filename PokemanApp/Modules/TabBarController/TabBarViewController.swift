@@ -37,3 +37,8 @@ class TabBarViewController: UITabBarController {
     
     
 }
+
+#Preview{
+    let vc = TabBarViewController()
+    return vc
+}
